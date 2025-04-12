@@ -1,0 +1,268 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  body {
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 2px solid #ff00ff;
+    background-color: #111;
+  }
+
+  nav a {
+    color: #fff;
+    margin: 0 1rem;
+    text-decoration: none;
+    border: 2px solid transparent;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    transition: 0.3s;
+  }
+
+  nav a:hover, nav a:focus {
+    border-color: #ff00ff;
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+  }
+
+  .hero {
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    color: #ff00ff;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 1rem auto;
+  }
+
+  .btn {
+    display: inline-block;
+    margin-top: 2rem;
+    background: transparent;
+    color: #ff00ff;
+    padding: 0.8rem 2rem;
+    border: 2px solid #ff00ff;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .btn:hover {
+    background: #ff00ff;
+    color: #000;
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+  }
+
+  .grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    }
+
+  .card {
+    background-color: #111;
+    padding: 1.5rem;
+    border: 1px solid #ff00ff;
+    border-radius: 10px;
+    transition: 0.3s;
+  }
+
+  .card:hover {
+    box-shadow: 0 0 15px #ff00ff, 0 0 30px #ff00ff;
+  }
+
+  .skills i {
+    font-size: 2rem;
+    margin-right: 10px;
+    color: #ff00ff;
+  }
+
+  form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 2rem;
+      }
+
+      input, textarea {
+      padding: 0.8rem;
+      border-radius: 5px;
+      border: none;
+      }
+
+      textarea {
+      width: 100%; /* Increase the width of the message box */
+      }
+
+      input[type="submit"] {
+      background-color: transparent;
+      color: #ff00ff;
+      border: 2px solid #ff00ff;
+      cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+      background-color: #ff00ff;
+      color: #000;
+      box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+      }
+
+  footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    color: #888;
+  }
+
+  @media (max-width: 600px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+  }
+    .section-heading {
+    text-align: center;
+    font-size: 2rem;
+    color: #ff00ff;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+  }
+
+  @media (max-width: 768px) {
+    #about {
+      flex-direction: column;
+      text-align: center;
+    }
+    #about img {
+      margin-bottom: 1rem;
+    }
+    .education-entry {
+      margin-left: 30px !important;
+          }
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            z-index: -1;
+            background: radial-gradient(circle, rgba(255, 0, 255, 0.3) 0%, transparent 70%);
+            animation: smokeEffect 8s ease-in-out infinite;
+            opacity: 0.7;
+        }
+        @keyframes smokeEffect {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 0.5;
+            }
+            50% {
+                transform: translateY(-20px) scale(1.2);
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(-40px) scale(1.5);
+                opacity: 0.4;
+            }
+        }
+        @keyframes waveEffect {
+            0% {
+                transform: translateX(0) translateY(-50%) scaleY(1);
+            }
+            25% {
+                transform: translateX(-25%) translateY(-48%) scaleY(1.2);
+            }
+            50% {
+                transform: translateX(-50%) translateY(-50%) scaleY(1.5);
+            }
+            75% {
+                transform: translateX(-75%) translateY(-52%) scaleY(1.2);
+            }
+            100% {
+                transform: translateX(-100%) translateY(-50%) scaleY(1);
+            }
+        }
+        @keyframes waveBackground {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: 40px 40px;
+            }
+        }
+        canvas#bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+        }
+        .bounce-box {
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        .rotating-box {
+            width: 60px;
+            height: 60px;
+            border: 3px solid #ff00ff;
+            position: fixed;
+            top: 150px;
+            right: 40px;
+            animation: rotate3D 4s linear infinite;
+            transform-style: preserve-3d;
+        }
+        .rotating-box.second {
+            top: 300px;
+            right: 80px;
+            animation-delay: 2s;
+        }
+        @keyframes rotate3D {
+            0% {
+                transform: rotateX(0deg) rotateY(0deg);
+            }
+            50% {
+                transform: rotateX(180deg) rotateY(180deg);
+            }
+            100% {
+                transform: rotateX(360deg) rotateY(360deg);
+            }
+        }
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
